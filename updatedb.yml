@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: install DB server with latest updates
+      apt:
+        name:
+          - mysql-testsuite-8.0
+        update_cache: yes
+        state: latest

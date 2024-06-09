@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: remove Apache2 and DB server packages
+      apt:
+        name:
+          - apache2
+          - mysql-testsuite-8.0
+        state: absent

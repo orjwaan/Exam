@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: install Apache2 and DB server packages
+      apt:
+        name:
+          - apache2
+          - mysql-testsuite-8.0
+        update_cache: yes
